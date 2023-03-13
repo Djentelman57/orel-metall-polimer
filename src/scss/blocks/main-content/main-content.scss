@@ -1,0 +1,141 @@
+.main-content {
+  position: relative;
+  padding-top: 65px;
+  padding-bottom: 59px;
+  .img-bg-position {
+    position: absolute;
+  }
+  .img-bg-right {
+    right: -160px;
+    bottom: 50%;
+    transform: translateY(50%);
+    overflow: hidden;
+    z-index: 0;
+  }
+  .img-bg-left {
+    left: 0;
+    bottom: 50%;
+    transform: translateY(50%);
+    overflow: hidden;
+    z-index: 0;
+  }
+}
+.content-wrapper {
+  padding: 65px;
+  background-color: #F9F9F9;
+  position: relative;
+  z-index: 10;
+}
+
+.title {
+  font-weight: 500;
+  font-size: 38px;
+  line-height: 119.2%;
+  color: #15151B;
+  font-family: 'Gilroy', sans-serif;
+  font-style: normal;
+}
+
+.subtitle {
+  font-family: 'Gilroy', sans-serif;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 38px;
+  text-transform: uppercase;
+  color: #15151B;
+}
+
+.red-line {
+  width: 69px;
+  height: 4px;
+  left: 307px;
+  top: 451px;
+  background: #ED3131;
+  margin-top: 28px;
+  margin-bottom: 28px;
+  display: block;
+}
+
+.fz-18 {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 27px;
+  color: #15151B;
+}
+
+.fz-16 {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 160.5%;
+  color: #424242;
+}
+
+.btn-arrow {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.185em;
+  text-transform: uppercase;
+  color: #15151B;
+  margin-top: auto;
+}
+
+.img-message {
+  position: absolute;
+  bottom: 0;
+  left: -150px;
+}
+
+.content-message {
+  position: absolute;
+  left: -40%;
+  bottom: 46%;
+  //background: #FFFFFF;
+  border-radius: 9px;
+  background: url("/image/mes.svg") no-repeat;
+  max-width: 170px;
+  height: 92px;
+  padding: 5px;
+  font-size: 16px;
+  line-height: 119%;
+  color: #15151B;
+  display: flex;
+  width: 100%;
+  a {
+    margin-top: 33px;
+  }
+}
+
+.message-text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 119%;
+  color: #15151B;
+  max-width: 139px;
+  padding: 9px 10px 9px 24px;
+}
+
+.img-message-tr {
+  position: absolute;
+}
+
+.main-content-wrapper {
+  gap: 50px;
+  z-index: 1000;
+  position: relative;
+}
+
+.main-content-block {
+  ppadding: 30px 30px 0 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content-text {
+  margin-top: 10px;
+}
+
+.main-content-arrow {
+  width: 28px;
+  margin-right: 12px;
+}

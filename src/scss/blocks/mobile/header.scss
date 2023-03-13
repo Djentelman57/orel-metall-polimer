@@ -1,0 +1,23 @@
+@media all and (min-width: 992px) {
+  .navbar .nav-item .dropdown-menu{ display: none; }
+  .navbar .nav-item:hover .nav-link{   }
+  .navbar .nav-item:hover .dropdown-menu{ display: block; }
+  .navbar .nav-item .dropdown-menu{ margin-top:0; }
+}
+
+@media (max-width: 576px) {
+  .header {
+    .header-info {
+      justify-content: center !important;
+    }
+    .header-logo {
+      div {
+        font-size: 16px;
+      }
+    }
+    .header-contacts {
+      gap: 10px;
+      justify-content: center;
+    }
+  }
+}

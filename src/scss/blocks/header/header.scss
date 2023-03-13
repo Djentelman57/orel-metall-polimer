@@ -1,0 +1,122 @@
+.header {
+  .header-info {
+    //max-height: 96px;
+  }
+  .header-logo {
+    img {
+      max-width: 55px;
+    }
+    div {
+      font-size: 30px;
+      letter-spacing: 3px;
+      color: #000000;
+    }
+  }
+  .header-img {
+    position: relative;
+    overflow: hidden;
+    max-height: 96px;
+    .header-img-position {
+      position: absolute;
+      top: 50%;
+      left: 15px;
+      transform: translateY(-50%);
+      font-family: 'Gilroy', sans-serif;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 16px;
+      letter-spacing: 0.23em;
+      text-transform: uppercase;
+      color: #15151B;
+    }
+  }
+  .header-contacts {
+    gap: 40px;
+    .header-contacts-circle {
+      width: 57px;
+      height: 57px;
+      border: 1px solid #D9D9D9;
+      border-radius: 100%;
+      display: flex;
+      padding: 16px;
+      justify-content: center;
+    }
+    .header-contacts-tel {
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 22px;
+      color: #15151B;
+      gap: 17px;
+    }
+    .header-contacts-email {
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 22px;
+      color: #15151B;
+      gap: 17px;
+    }
+    .header-contacts-social {
+      width: 36px;
+      height: 36px;
+      border-radius: 100%;
+      background: #F0F0F0;
+      padding: 5px;
+    }
+  }
+
+  .header-nav {
+    background: #F9F9F9;
+    box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.17);
+    .nav-link {
+      font-weight: 700;
+      font-size: 13px;
+      line-height: 16px;
+      text-transform: uppercase;
+      color: #000000;
+      transition: 0.3s;
+    }
+    .navbar-nav {
+      background-color: inherit;
+    }
+    .nav-link.active {
+      color: #6B6B6B;
+    }
+    .nav-link:hover {
+      color: #049547;
+      transition: 0.3s;
+    }
+    .link-red {
+      color: #C6181B;
+    }
+    .btn-item-p {
+      padding-left: 15px;
+      padding-right: 15px;
+      background-color: #D82B35;
+      transition: 0.3s;
+    }
+    .btn-item-p:hover {
+      background: #047237;
+      transition: 0.3s;
+    }
+    .dropdown-menu {
+      background: #047237;
+      .dropdown-item {
+        color: #FFFFFF;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 195.4%;
+        transition: 0.3s;
+      }
+    }
+    .dropdown-toggle::after {
+      display: none;
+    }
+    .dropdown-item:hover,
+    .dropdown-item:focus {
+      background-color: inherit;
+      color: #C6181B;
+      transition: 0.3s;
+    }
+  }
+}

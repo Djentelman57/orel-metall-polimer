@@ -1,0 +1,336 @@
+.container {
+  @media (min-width: 1600px) {
+    max-width: 1406px;
+  }
+  //@media (min-width: 1320px) {
+  //  max-width: 1302.5px;
+  //}
+}
+
+.navbar-toggler {
+  padding: 5px;
+  box-shadow: 0 0 0 0;
+  border: none;
+  min-height: 35px;
+
+  &:focus {
+    box-shadow: 0 0 0 0;
+  }
+
+  .navbar-toggler__line {
+    display: block;
+    width: 25px;
+    background-color: $body-txt;
+    height: 2px;
+    position: relative;
+    transition: $transition;
+
+    &::before, &::after {
+      position: absolute;
+      content: '';
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: $body-txt;
+    }
+
+    &::before {
+      animation: navbarTogglerBeforeClose;
+      animation-fill-mode: forwards;
+      animation-duration: .2s;
+    }
+
+    &::after {
+      animation: navbarTogglerAfterClose;
+      animation-fill-mode: forwards;
+      animation-duration: .2s;
+    }
+  }
+
+  &[aria-expanded="true"] {
+    .navbar-toggler__line {
+      transition: $transition;
+      background-color: transparent;
+
+      &::before {
+        animation: navbarTogglerBeforeOpen;
+        animation-fill-mode: forwards;
+        animation-duration: .2s;
+      }
+
+      &::after {
+        animation: navbarTogglerAfterOpen;
+        animation-fill-mode: forwards;
+        animation-duration: .2s;
+      }
+    }
+  }
+}
+
+@keyframes navbarTogglerBeforeOpen {
+  0% {
+    top: -8px;
+  }
+
+  50% {
+    top: 0;
+  }
+
+  60% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(45deg);
+  }
+}
+
+@keyframes navbarTogglerBeforeClose {
+  0% {
+    top: 0;
+    transform: rotate(45deg);
+  }
+
+  30% {
+    top: 0;
+    transform: rotate(0);
+  }
+
+  100% {
+    top: -8px;
+  }
+}
+
+@keyframes navbarTogglerAfterOpen {
+  0% {
+    bottom: -8px;
+  }
+
+  50% {
+    bottom: 0;
+  }
+
+  60% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(-45deg);
+  }
+}
+
+@keyframes navbarTogglerAfterClose {
+  0% {
+    bottom: 0;
+    transform: rotate(-45deg);
+  }
+
+  30% {
+    bottom: 0;
+    transform: rotate(0);
+  }
+
+  100% {
+    bottom: -8px;
+  }
+}
+
+.navbar>.container,
+.navbar>.container-fluid,
+.navbar>.container-lg,
+.navbar>.container-md,
+.navbar>.container-sm,
+.navbar>.container-xl,
+.navbar>.container-xxl {
+  @media (min-width: 992px) {
+    flex-wrap: wrap;
+  }
+
+  @media (min-width: 1200px) {
+    justify-content: center;
+  }
+}
+
+.form-control, textarea.form-control {
+  border-radius: $border-radius;
+  border: 1px solid $stroke-2;
+  color: $input-text;
+  padding: 11.5px 30px;
+  font-size: 14px;
+
+  &_input-main {
+    background-color: $gray-1;
+    text-align: center;
+
+    &:focus {
+      background-color: $gray-1;
+    }
+  }
+
+  &:focus {
+    color: $input-text;
+    border-color: $stroke-4;
+    box-shadow: 0 0 0 0;
+
+    &::placeholder {
+      opacity: 0.5;
+      transition: $transition;
+    }
+
+    &::-webkit-input-placeholder {
+      opacity: 0.5;
+      transition: $transition;
+    }
+
+    &::-moz-placeholder {
+      opacity: 0.5;
+      transition: $transition;
+    }
+
+    &::-moz-placeholder {
+      opacity: 0.5;
+      transition: $transition;
+    }
+  }
+}
+
+textarea.form-control {
+  border-radius: $border-radius-small;
+}
+.form-select {
+  border-radius: $border-radius;
+  border: 1px solid $stroke-2;
+  color: $input-text;
+  padding: 11.5px 30px;
+  font-size: 14px;
+  background-position: right 1.5rem center;
+
+  &:focus {
+    color: $input-text;
+    border-color: $stroke-4;
+    box-shadow: 0 0 0 0;
+  }
+}
+
+.btn {
+  color: $btn-txt;
+  background: $btn-gradient-1;
+  background: linear-gradient(0deg, $btn-gradient-1 0%, $btn-gradient-2 100%);
+  border-radius: $border-radius;
+  text-transform: uppercase;
+  font-size: 13px;
+  line-height: 1;
+  padding: 15.5px 30px;
+  border-color: transparent;
+  transition: none;
+  font-weight: 600;
+
+  &:hover {
+    background-color: $btn-bg-hover;
+    background: linear-gradient(0deg, $btn-bg-hover 0%, $btn-bg-hover 100%);
+    color: $accent;
+    border-color: transparent;
+    transition: none;
+  }
+
+  &:active {
+    background-color: $btn-bg-hover;
+    background: linear-gradient(0deg, $btn-bg-hover 0%, $btn-bg-hover 100%);
+    color: $accent !important;
+    border-color: transparent !important;
+  }
+
+  &_empty {
+    border-radius: $border-radius;
+    color: $accent;
+    background: transparent;
+    border: 1px solid #BCBCBC;
+    padding: 15px 16px;
+    font-size: 14px;
+
+    &.active {
+      background-color: $btn-bg-hover;
+      background: linear-gradient(0deg, $btn-bg-hover 0%, $btn-bg-hover 100%);
+      color: $accent;
+      border-color: transparent;
+    }
+  }
+
+  &_with-arrow {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    max-width: 250px;
+    text-transform: unset;
+    font-weight: 350;
+    background: $accent-secondary;
+    border: 1px solid $accent-stroke-dropdown;
+    border-radius: 100px;
+    padding: 6px 25px 7px 25px;
+    transition: $transition;
+
+    span {
+      white-space: nowrap;
+      align-self: center;
+
+      font-size: 17px;
+      color: $text-dark;
+    }
+
+    .arrow-link {
+      display: block;
+      width: 100%;
+      height: 35px;
+
+      &::before {
+        right: 0;
+        top: calc(50% - 8px);
+        width: 25px;
+        background-position: center right;
+        background-repeat: no-repeat;
+      }
+    }
+
+    &:hover {
+      transition: $transition;
+      background: $accent-secondary;
+
+      color: $accent;
+      span {
+        color: $accent;
+      }
+
+      .arrow-link {
+        &::before {
+          transform: translateX(5px);
+        }
+      }
+    }
+  }
+}
+
+.dropdown-toggle {
+  &::after {
+    //transition: $transition;
+  }
+
+  &[aria-expanded="true"] {
+    &::after {
+      transform: rotate(-180deg);
+      //transition: $transition;
+    }
+  }
+}
+
+
+.header__navbar-collapse {
+  border-color: transparent;
+}
+
+.table-striped>tbody>tr:nth-of-type(odd)>* {
+  background-color: $table-stripe;
+}
+
+.table-hover>tbody>tr:hover>* {
+  background-color: $table-stripe-hover;
+}

@@ -1,0 +1,33 @@
+@import "bootstrap";
+@import "swiper/swiper-bundle.min.css";
+
+@import "theme/variables";
+@import "global/mixins";
+@import "fonts";
+
+@import "theme/bootstrap-redefine";
+@import "theme/simplebar-redefine";
+
+@import "global/base";
+@import "@fancyapps/fancybox/dist/jquery.fancybox.min.css";
+
+
+html,
+body {
+	min-width: 320px;
+	width: 100%;
+	height: 100%;
+	font-family: "GolosText", sans-serif;
+	font-weight: 400;
+	background-color: $body-bg;
+	color: $body-txt;
+	font-size: 16px;
+	line-height: 1.64; // 24.6px
+	//overflow-x: hidden;
+}
+
+
+
+@import "blocks/blocks";
+
+

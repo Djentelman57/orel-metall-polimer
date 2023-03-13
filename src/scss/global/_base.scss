@@ -1,0 +1,489 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+main {
+  display: block;
+  min-width: 320px;
+}
+
+p,ul,ol {
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+a {
+  text-decoration: none;
+
+  &:not(:hover) {
+    color: $body-txt;
+  }
+}
+
+img {
+  border-style: none;
+  //max-height: auto;
+  max-width: 100%;
+}
+
+label {
+  width: 100%;
+}
+
+.visually-hidden,
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+a.btn, button, input[type="button"] {
+  transition: $transition;
+
+  &:hover {
+    transition: $transition;
+  }
+}
+
+.accent {
+  color: $accent !important;
+}
+
+a.accent {
+  color: $accent-link !important;
+
+  &:hover {
+    color: $accent-link-hover !important;
+  }
+}
+
+.accent-color:not(:hover) {
+  color: $accent;
+}
+
+.accent-bg {
+  background-color: $accent;
+}
+
+.custom-checkbox-label {
+  display: block;
+  position: relative;
+  padding-left: 1.6rem;
+  margin-bottom: 0.4rem;
+  font-size: 1rem;
+  line-height: 1.2rem;
+  cursor: pointer;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 1.25rem;
+    width: 1.25rem;
+    line-height: 1.2rem;
+    background-color: $checkbox-bg;
+    box-shadow: 0 0 1px 1px $checkbox-border;
+    transition: $transition;
+    border-radius: 2px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      opacity: 0;
+
+      left: calc(50% - 14%);
+      top: calc(50% - 32%);
+      width: 35%;
+      height: 50%;
+      border: solid $checkbox-icon-color;
+      border-width: 0 0.15rem 0.15rem 0;
+
+      -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      transform: rotate(45deg);
+      transition: $transition;
+    }
+  }
+
+  &:hover {
+    input {
+      ~ .checkmark {
+        background-color: $checkbox-bg-hover;
+        box-shadow: 0 0 1px 1px $checkbox-border-hover;
+
+        &::after {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+    font-size: 0;
+
+    &:checked ~ .checkmark {
+      background-color: $checkbox-bg-checked;
+      box-shadow: 0 0 1px 1px $checkbox-border-checked;
+
+      &::after {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.custom-radio-label {
+  display: block;
+  position: relative;
+  padding-left: 1.6rem;
+  margin-bottom: 0.4rem;
+  font-size: 1rem;
+  cursor: pointer;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 1.25rem;
+    width: 1.25rem;
+    line-height: 1.2rem;
+    background-color: $radio-bg;
+    border-radius: 50%;
+    box-shadow: 0 0 1px 1px $radio-border;
+    transition: $transition;
+
+    &::after {
+      content: "";
+      position: absolute;
+      opacity: 0;
+      top: 25%;
+      left: 25%;
+      width: 50%;
+      height: 50%;
+      border-radius: 50%;
+      background: $radio-icon-color;
+      transition: $transition;
+    }
+  }
+
+  &:hover {
+    input {
+      ~ .checkmark {
+        background-color: $radio-bg-hover;
+        box-shadow: 0 0 1px 1px $radio-border-hover;
+
+        &::after {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+    font-size: 0;
+
+    &:checked ~ .checkmark {
+      background-color: $radio-bg-checked;
+      box-shadow: 0 0 1px 1px $radio-border-checked;
+
+      &::after {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.list-style-none {
+  list-style: none;
+  padding-left: 0;
+}
+
+.list-style-custom {
+  list-style: none;
+  padding-left: 26px;
+
+  li {
+    position: relative;
+
+    &::before {
+      position: absolute;
+      content: '';
+      top: 0.55em;
+      left: -26px;
+      width: 7px;
+      //width: 0.467em;
+      height: 7px;
+      //height: 0.467em;
+      background-color: transparent;
+      border-radius: 50%;
+      border: 2px solid $accent;
+    }
+  }
+
+  &_two-rows {
+    margin-bottom: 16px !important;
+
+    li {
+      margin-bottom: 15px;
+    }
+  }
+}
+
+input::placeholder {
+  color: $placeholder-text;
+  transition: $transition;
+}
+
+textarea::placeholder {
+  color: $placeholder-text;
+  transition: $transition;
+}
+
+input[type="text"]::-webkit-input-placeholder /* Chrome/Opera/Safari */ {
+  color: $placeholder-text;
+  transition: $transition;
+}
+
+textarea::-webkit-input-placeholder {
+  color: $placeholder-text;
+  transition: $transition;
+}
+
+input[type="text"]::-moz-placeholder /* Firefox 19+ */ {
+  opacity: 1;
+  transition: $transition;
+}
+
+textarea::-moz-placeholder {
+  opacity: 1;
+  transition: $transition;
+}
+
+input[type="text"]:-moz-placeholder /* Firefox 18- */ {
+  opacity: 1;
+  transition: $transition;
+}
+
+textarea:-moz-placeholder /* Firefox 18- */ {
+  opacity: 1;
+  transition: $transition;
+}
+
+textarea::placeholder {
+  opacity: 1;
+  transition: $transition;
+}
+
+.list-style {
+  &_check {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      position: relative;
+      padding-left: 30px;
+
+      &::before {
+        position: absolute;
+        content: "";
+        top: calc(50% - 10px);
+        left: 0;
+        width: 20px;
+        height: 20px;
+        background-image: url('../img/icons/check-icon.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+      }
+    }
+  }
+}
+
+/*
+.flex {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.--just-space {
+  justify-content: space-between;
+}
+
+.--just-center {
+  justify-content: center;
+}
+
+.--just-end {
+  justify-content: flex-end;
+}
+
+.--align-str {
+  align-items: stretch;
+}
+
+.--align-center {
+  align-items: center;
+}
+
+.--align-end {
+  align-items: flex-end;
+}
+
+.--dir-col {
+  flex-direction: column;
+}
+
+*/
+
+.section-padding {
+  padding: 45px 0;
+
+  @media (min-width: 768px) {
+    padding: 50px 0;
+  }
+
+  @media (min-width: 1200px) {
+    padding: 60px 0;
+  }
+}
+
+.text-pseudo-underline {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    border-bottom: 1px dotted $accent;
+  }
+
+  &:hover {
+    &::before {
+      //transform: translateY(2px);
+      //transition: $transition;
+      //background-color: $accent-link-hover;
+    }
+  }
+
+  &_gray {
+    &::before {
+      border-bottom: 1px solid $stroke-2;
+    }
+  }
+
+  &_line {
+    &::before {
+      border-bottom: 1px solid $accent;
+    }
+
+    &_gray {
+      &::before {
+        border-bottom: 1px solid $stroke-2;
+      }
+    }
+  }
+
+  &_dotted {
+    &_gray {
+      &::before {
+        border-bottom: 1px dotted $stroke-8;
+      }
+    }
+  }
+
+  &_dashed {
+    &_gray {
+      &::before {
+        border-bottom: 1px dashed $stroke-8;
+      }
+    }
+  }
+}
+
+.text-border-underline {
+  border-bottom: 1px solid $accent;
+
+  &_gray {
+    border-color: $stroke-2;
+  }
+
+  &_dotted {
+    border-bottom: 1px dotted;
+
+    &_gray {
+      border-bottom: 1px dotted;
+      border-color: $stroke-8;
+    }
+  }
+}
+
+.unclickable {
+  pointer-events: none;
+}
+
+// Mobile overlay
+.mobile-menu-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  z-index: 3;
+  opacity: 0;
+  user-select: none;
+  pointer-events: none;
+  visibility: hidden;
+  transition: $transition;
+
+  &.overlay-show {
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+    transition: $transition;
+  }
+}
+
+input::-webkit-calendar-picker-indicator {
+  position: absolute;
+  top: calc(50% - 8px);
+  left: -15px;
+  background-image: none;
+  width: 15px;
+  height: 15px;
+}
