@@ -1,0 +1,120 @@
+.footer {
+  background: #F9F9F9;
+  padding-top: calc(30px + 20 * (100vw / 1920));
+  padding-bottom: 20px;
+  position: relative;
+  overflow: hidden;
+}
+.footer-black-link {
+  font-family: 'Gilroy', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: #000000 !important;
+  margin-bottom: 5px;
+}
+.footer-black-link:last-child {
+  margin-bottom: 0;
+}
+.footer-red-link {
+  font-family: 'Gilroy', sans-serif;
+  font-style: normal;
+  margin-bottom: 15px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+  text-transform: uppercase;
+  color: #ED3131 !important;
+}
+.footer-link {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 91.5%;
+  color: #676767;
+  margin-bottom: 15px;
+}
+.footer-link:last-child {
+  margin-bottom: 0;
+}
+.footer-social {
+  padding: 7px 12px;
+  border: 1px solid #676767;
+  border-radius: 100%;
+}
+.footer-tel-number {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  color: #676767;
+}
+.footer-email {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #676767;
+}
+.w-20 {
+  width: 20%;
+  min-width: 270px;
+  margin-bottom: 30px;
+}
+.made-in-infocity {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 91.5%;
+  color: #636363;
+}
+.red-text {
+  color: #ED3131 !important;
+}
+.footer-polimer {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 91.5%;
+  color: #636363;
+}
+.footer-politics {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 91.5%;
+  color: #636363;
+}
+.footer-info {
+  padding-top: 20px;
+  border-top: 1px solid rgba(217, 217, 217, 0.3);
+}
+.bg-fiol {
+  position: absolute;
+  left: -127px;
+  bottom: -27px;
+  img {
+    width: calc(50% + 70 * (100vw / 1920));
+  }
+}
+.bg-orange {
+  position: absolute;
+  right: -370px;
+  bottom: -32px;
+  img {
+    width: calc(50% + 70 * (100vw / 1920));
+  }
+}
+.footer-link-mob {
+  display: none;
+}
+@media (max-width: 1600px) {
+  .footer-tel-mob {
+    display: none;
+  }
+  .footer-link-block-mob {
+    display: none !important;
+  }
+  .footer-link-mob {
+    display: block;
+    .footer-link-block {
+      margin-top: 20px !important;
+    }
+  }
+}

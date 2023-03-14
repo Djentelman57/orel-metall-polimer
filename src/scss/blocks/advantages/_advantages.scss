@@ -1,0 +1,45 @@
+.advantages {
+  padding-bottom: calc(50px + 100 * (100vw / 1920));
+  position: relative;
+}
+.site-bg-girl {
+  position: absolute;
+  right: -10px;
+  top: 0;
+}
+.advantages-block {
+  border-top: 1px solid #CECECE;
+  padding-top: calc(30px + 40 * (100vw / 1920));
+  position: relative;
+  ustify-content: center;
+}
+.advantages-block:before {
+  content: "";
+  width: calc(50px + 21 * (100vw / 1920));
+  height: 4px;
+  background: #ED3131;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.advantages-wrapper {
+  padding-left: calc(15px + 20 * (100vw / 1920));
+  padding-right: calc(15px + 20 * (100vw / 1920));
+  border-left: 1px dashed #8F8F8F;
+  max-width: 275px;
+  margin-bottom: 30px;
+}
+.advantages-title {
+  margin-top: calc(25px + 30 * (100vw / 1920));
+  font-weight: 500;
+  font-size: 19px;
+  line-height: 130.5%;
+  color: #15151B;
+}
+.advantages-number {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 130.5%;
+  color: #676767;
+  margin-top: 10px;
+}
