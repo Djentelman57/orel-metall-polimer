@@ -115,15 +115,12 @@ $(function () {
     }
 });
 
-$(window).scroll(function() {
-    var height = $(window).scrollTop();
+window.onscroll = function() {
+    var fixedTop = document.getElementById('navbar-active');
 
-    /*Если сделали скролл на 100px задаём новый класс для header*/
-    if(height > 100){
-        $('header').addClass('header-fixed');
-    } else{
-        /*Если меньше 100px удаляем класс для header*/
-        $('header').removeClass('header-fixed');
+    if (window.pageYOffset > 96) {
+        fixedTop.classList.add('block');
+    } else {
+        fixedTop.classList.remove('block');
     }
-
-});
+};

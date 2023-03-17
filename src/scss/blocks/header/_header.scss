@@ -56,14 +56,6 @@
       color: #15151B;
       gap: 17px;
     }
-    .header-contacts-social {
-      width: 36px;
-      height: 36px;
-      border-radius: 100%;
-      background: #F0F0F0;
-      padding: 5px;
-      transition: 0.3s;
-    }
     .header-contacts-social:hover {
       background: #D82B35;
       transition: 0.3s;
@@ -79,6 +71,7 @@
   .header-nav {
     background: #F9F9F9;
     box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.17);
+    transition: 0.3s;
     .nav-link {
       font-weight: 700;
       font-size: 13px;
@@ -131,7 +124,110 @@
     }
   }
 }
-.menu.fixed {
+.header-contacts-social {
+  width: 36px;
+  height: 36px;
+  border-radius: 100%;
+  background: #F0F0F0;
+  padding: 5px;
+  transition: 0.3s;
+}
+.navbar-scroll {
+  display: none;
+}
+
+.header-nav.block {
   position: fixed;
-  top: 0px;
+  width: 100%;
+  z-index: 1000000;
+  top: 0;
+  transition: 0.3s;
+  .navbar-no-scroll {
+    display: none;
+  }
+  .navbar-scroll {
+    display: block;
+    .navbar {
+      padding: 1px;
+    }
+    .navbar-toggler {
+      padding: 19px 12px;
+      background: #ED3131;
+      border-radius: 1px;
+      span {
+        display: block;
+        width: 25px;
+        height: 2px;
+        background: #FFFFFF;
+        margin-bottom: 4px;
+      }
+      span:last-child {
+        margin-bottom: 0;
+      }
+    }
+    .header-img-position {
+      font-family: 'Gilroy', sans-serif;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 16px;
+      letter-spacing: 0.23em;
+      text-transform: uppercase;
+      color: #15151B;
+    }
+    .header-logo {
+      margin-left: 16px;
+      img {
+        max-width: 44px;
+      }
+      div {
+        font-size: calc(11px + 7 * (100vw / 1920));
+        font-weight: 500;
+        letter-spacing: 2px;
+      }
+    }
+    .header-img-position {
+      font-size: 11px;
+      font-weight: 500;
+      margin-left: 40px;
+    }
+    .header-contacts-tel {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 19px;
+      color: #15151B;
+    }
+    .header-contacts-email {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 19px;
+      color: #15151B;
+      margin-left: 23px;
+    }
+    .header-social {
+      margin-left: 23px;
+    }
+    .btn-item-p {
+      margin-left: 23px;
+      border-radius: 44px;
+      padding: 12px 16px;
+      background: #D82B35;
+      font-weight: 700;
+      font-size: 12px;
+      line-height: 15px;
+      text-transform: uppercase;
+      color: #FFFFFF;
+    }
+  }
+  @media (max-width: 768px) {
+    .header-img-position {
+      display: none !important;
+    }
+    .header-contacts-tel {
+      display: none !important;
+    }
+    .header-contacts-email {
+      display: none !important;
+    }
+  }
 }

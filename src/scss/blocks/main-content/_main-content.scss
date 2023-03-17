@@ -193,3 +193,44 @@
     background: inherit;
   }
 }
+
+@media (max-width: 1400px) {
+  .img-message {
+    left: -190px;
+  }
+  .main-content .img-bg-right {
+    right: calc(-500px + 12.5vw);
+  }
+  .img-content {
+    position: relative;
+    z-index: 2;
+  }
+}
+
+@media (max-width: 576px) {
+  .img-message {
+    display: none;
+  }
+  .img-bg-position.img-bg-left {
+    display: none;
+  }
+  .site-bg-green {
+    display: none;
+  }
+  .site-bg-girl {
+    display: none;
+  }
+  .bg-orange {
+    display: none;
+  }
+  .bg-fiol {
+    display: none;
+  }
+  .advantages-block {
+    text-align: center;
+    justify-content: center;
+  }
+  .advantages-wrapper {
+    border-left: none;
+  }
+}
