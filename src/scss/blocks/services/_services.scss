@@ -1,0 +1,25 @@
+.services {
+  padding-bottom: calc(50px + 100 * (100vw / 1920));
+  .points {
+    max-width: 750px;
+    padding-bottom: calc(40px + 30 * (100vw / 1920));
+  }
+  .swiper-about-purpose-block {
+    padding-top: calc(40px + 40 * (100vw / 1920));
+    padding-bottom: 0;
+  }
+  .img-block-left {
+    top: 58%;
+    left: -60px;
+  }
+  .img-block-right {
+    top: 30%;
+  }
+}
+.services-text {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  color: #424242;
+  margin-top: calc(40px + 30 * (100vw / 1920));
+}

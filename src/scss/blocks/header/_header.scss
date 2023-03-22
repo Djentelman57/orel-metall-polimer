@@ -147,13 +147,7 @@
   }
   .navbar-scroll {
     display: block;
-    .navbar {
-      padding: 1px;
-    }
-    .navbar-toggler {
-      padding: 19px 12px;
-      background: #ED3131;
-      border-radius: 1px;
+    .dropdown {
       span {
         display: block;
         width: 25px;
@@ -161,10 +155,91 @@
         background: #FFFFFF;
         margin-bottom: 4px;
       }
+      .btn.btn-secondary.dropdown-toggle {
+        padding: 16px 12px;
+        border-radius: 1px;
+        background: #ED3131;
+        border: 0;
+        transition: 0.3s;
+      }
+      .btn.btn-secondary.dropdown-toggle.show {
+        padding: 20px 12px;
+         span:first-child {
+           transform: rotate(45deg);
+           position: relative;
+           top: 3px;
+           transition: 0.3s;
+         }
+        span:nth-child(2) {
+          display: none;
+          transition: 0.3s;
+        }
+        span:last-child {
+          transform: rotate(-45deg);
+          position: relative;
+          bottom: 3px;
+          transition: 0.3s;
+        }
+      }
       span:last-child {
         margin-bottom: 0;
       }
+      .dropdown-menu.show {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .dropdown-item {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 13px;
+        line-height: 16px;
+        text-transform: uppercase;
+        color: #000000;
+      }
+      .dropdown-item.active {
+        background-color: inherit;
+      }
+      .dropdown-menu {
+        width: 100%;
+        position: fixed;
+        top: 48px;
+        background: #f9f9f9;
+        border: 0;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        .dropdown-menu {
+          width: inherit;
+          position: absolute;
+          top: inherit;
+          background: #047237;
+          border: 0;
+        }
+        .dropdown-toggle {
+          color: #049547;
+          margin-top: 4px;
+          padding-right: 15px;
+          padding-left: 15px;
+        }
+        .dropdown-menu.show {
+          display: inherit;
+          flex-wrap: inherit;
+        }
+        .dropdown-item:hover {
+          color: #2B2F86 !important;
+        }
+      }
+      .link-red {
+        color: #c6181b;
+      }
     }
+    .navbar {
+      padding: 1px;
+    }
+    //.navbar-toggler {
+    //  padding: 19px 12px;
+    //  background: #ED3131;
+    //  border-radius: 1px;
+    //}
     .header-img-position {
       font-family: 'Gilroy', sans-serif;
       font-style: normal;

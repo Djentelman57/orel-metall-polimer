@@ -1,9 +1,38 @@
-import Swiper, {Navigation, Pagination, Thumbs, Grid} from "swiper";
+import Swiper, {Navigation, Pagination, Thumbs, Grid, Scrollbar} from "swiper";
 
 new Swiper(".technologies-swiper", {
     modules: [Pagination, Navigation, Grid],
     slidesPerView: 1,
-    spaceBetween: 22,
+    grabCursor: true,
+    loop: true,
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+});
+
+new Swiper(".about-purpose-swiper", {
+    modules: [Pagination, Navigation, Grid],
+    slidesPerView: 1,
+    grabCursor: true,
+    loop: true,
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+});
+
+new Swiper(".services-swiper", {
+    modules: [Pagination, Navigation, Grid],
+    slidesPerView: 1,
     grabCursor: true,
     loop: true,
     pagination: {
@@ -74,41 +103,36 @@ if (document.querySelector('.reviewsSlider') != null) {
     setIds(slidesContainer);
 }
 
-const swiper = new Swiper(".franchiseSlider", {
-    modules: [Pagination, Navigation, Grid],
-    initialSlide: 1,
+const swiper = new Swiper(".about-advantages-swiper", {
+    modules: [Pagination, Navigation, Grid, Scrollbar],
     slidesPerView: 1,
     spaceBetween: 0,
     grabCursor: true,
-    centeredSlides: true,
-    slideActiveClass: "active",
-
-    pagination: {
-        el: ".about-franchise__swiper .swiper-pagination",
-        type: 'fraction',
-        formatFractionCurrent: function (number) {
-            return ('0' + number).slice(-2);
-        },
-        formatFractionTotal: function (number) {
-            return ('0' + number).slice(-2);
-        },
-        renderFraction: function (currentClass, totalClass) {
-            return '<span class="' + currentClass + '"></span>' +
-                ' / ' +
-                '<span class="' + totalClass + '"></span>';
-        }
-    },
-    navigation: {
-        nextEl: '.about-franchise__swiper .swiper-button-next-unique',
-        prevEl: '.about-franchise__swiper .swiper-button-prev-unique',
+    loop: true,
+    scrollbar: {
+        el: '.swiper-scrollbar',
+        draggable: true,
+        dragSize: 71,
     },
     breakpoints: {
         320: {
             slidesPerView: 1,
             spaceBetween: 0,
         },
+        420: {
+            slidesPerView: 2,
+            spaceBetween: 0,
+        },
         768: {
             slidesPerView: 3,
+            spaceBetween: 0,
+        },
+        992: {
+            slidesPerView: 4,
+            spaceBetween: 0,
+        },
+        1200: {
+            slidesPerView: 5,
             spaceBetween: 0,
         }
     }

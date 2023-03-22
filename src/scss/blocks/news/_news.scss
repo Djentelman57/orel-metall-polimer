@@ -1,0 +1,62 @@
+.news {
+  padding-bottom: calc(50px + 100 * (100vw / 1920));
+  position: relative;
+  .img-block-left {
+    position: absolute;
+    left: 0;
+    bottom: 10%;
+    top: inherit;
+  }
+  .img-block-right {
+    position: absolute;
+    right: 0;
+    top: 10%;
+  }
+}
+.title-blue {
+  color: #2B2F86;
+}
+.blue-line {
+  background: #2B2F86;
+}
+.news-info-date {
+  font-family: 'Gilroy', sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+  color: #5F5F5F;
+  margin-bottom: 20px;
+  margin-top: 15px;
+}
+.news-info-title {
+  font-family: 'Golos', sans-serif;
+  margin-bottom: 17px;
+}
+.news-info-text {
+  line-height: 184.7%;
+  color: #424242;
+  margin-bottom: 20px;
+}
+.news-info-btn {
+  font-family: 'Gilroy', sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.185em;
+  text-transform: uppercase;
+  color: #15151B;
+  img {
+    padding: 12px 13px;
+    background-color: #ED3131;
+    margin-right: 18px;
+    border-radius: 100%;
+  }
+}
+.news-wrapper {
+  padding-top: calc(30px + 30 * (100vw / 1920));
+  padding-bottom: calc(30px + 30 * (100vw / 1920));
+  border-bottom: 1px solid #D7D7D7;
+}
+.news-wrapper:last-child {
+  border-bottom: 0;
+}
