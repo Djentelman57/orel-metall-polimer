@@ -1,0 +1,50 @@
+.special-coatings {
+  position: relative;
+  padding-bottom: calc(50px + 100 * (100vw / 1920));
+  .img-block-left {
+    left: -60px;
+    top: 30%;
+  }
+  .img-block-right1 {
+    top: 10%;
+  }
+  .img-block-right2 {
+    top: 60%;
+    transform: rotate(180deg);
+  }
+}
+.special-coatings-wrapper {
+  padding-top: calc(20px + 30 * (100vw / 1920));
+  padding-bottom: calc(20px + 30 * (100vw / 1920));
+  border-bottom: 1px solid #D7D7D7;
+  position: relative;
+  z-index: 100;
+}
+.special-coatings-wrapper:last-child {
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+.special-coatings-img {
+  max-height: 326px;
+  text-align: center;
+}
+.special-coatings-block-title {
+  font-family: 'Gilroy', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: calc(22px + 4 * (100vw / 1920));
+  line-height: 31px;
+  text-transform: uppercase;
+  color: #15151B;
+  margin-bottom: 22px;
+  margin-top: 22px;
+}
+.special-coatings-block {
+  padding-left: 30px;
+}
+.special-coatings-block-text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 160.5%;
+  color: #424242;
+}

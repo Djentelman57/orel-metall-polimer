@@ -25,7 +25,7 @@
   display: block;
   width: 69px;
   height: 4px;
-  margin: 20px auto;
+  margin: 20px auto calc(20px + 40 * (100vw / 1920)) auto;
 }
 .red-line {
   background: #ED3131;

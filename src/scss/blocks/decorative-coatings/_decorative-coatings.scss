@@ -1,0 +1,17 @@
+.fz-18 {
+  position: relative;
+  z-index: 100;
+}
+.decorative-coatings {
+  padding-bottom: calc(50px + 100 * (100vw / 1920));
+  position: relative;
+  .img-block-left {
+    left: -60px;
+  }
+  .img-block-right {
+    top: 40%;
+  }
+}
+.decorative-coatings-wrapper {
+  max-height: 335px;
+}
