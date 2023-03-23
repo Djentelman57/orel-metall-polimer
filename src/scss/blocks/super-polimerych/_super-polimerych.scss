@@ -1,10 +1,25 @@
 .super {
   position: relative;
   padding-bottom: calc(50px + 100 * (100vw / 1920));
+  .img-block-left1 {
+    left: -60px;
+  }
+  .img-block-right1 {
+    top: 20%;
+  }
+  .img-block-left2 {
+    left: -60px;
+    top: 50%;
+  }
+  .img-block-right2 {
+    top: 75%;
+  }
 }
 .main-wrapper {
   background: #F9F9F9;
   padding: calc(20px + 54 * (100vw / 1920)) calc(20px + 54 * (100vw / 1920)) calc(20px + 70 * (100vw / 1920)) calc(20px + 54 * (100vw / 1920));
+  position: relative;
+  z-index: 100;
 }
 .super-swipers-wrapper {
   padding-top: calc(50px + 78 * (100vw / 1920));

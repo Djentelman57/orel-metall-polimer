@@ -306,3 +306,22 @@
     }
   }
 }
+
+.nav-item.dropdown {
+  .nav-link.dropdown-toggle {
+    color: #049547;
+  }
+}
+.navbar-nav {
+  .nav-item {
+    .nav-link-news {
+      color: #2B2F86;
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .footer-info {
+    gap: 10px;
+  }
+}
