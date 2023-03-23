@@ -1,0 +1,10 @@
+.employment {
+  position: relative;
+  padding-bottom: calc(50px + 100 * (100vw / 1920));
+  .menu-wrapper-link:hover {
+    background: #2B2F86;
+    .menu-btn path {
+      stroke: #2B2F86;
+    }
+  }
+}

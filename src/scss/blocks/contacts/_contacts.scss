@@ -1,0 +1,84 @@
+.contacts {
+  position: relative;
+  padding-bottom: calc(50px + 100 * (100vw / 1920));
+  a {
+    color: #D82B35;
+    text-decoration: underline;
+  }
+  p {
+    margin-bottom: 0;
+  }
+  .img-block-right {
+    transform: rotate(180deg);
+    top: 67%;
+  }
+}
+.contacts-wrapper {
+  padding-bottom: calc(40px + 55 * (100vw / 1920));
+}
+.contacts-subtitle {
+  font-weight: 700;
+}
+.contacts-block {
+  margin-bottom: 25px;
+}
+.contacts-map {
+  margin-bottom: calc(30px + 35 * (100vw / 1920));
+  iframe {
+    height: calc(200px + 520 * (100vw / 1920));
+  }
+}
+
+#wrapMap {
+  position: relative;
+  cursor: help;
+  overflow: hidden;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgb(204, 204, 204);
+  border-image: initial;
+}
+.mapTitle {
+  position: absolute;
+  z-index: 1000;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 0px 5px;
+  display: none;
+  padding: 5px 20px;
+  border-radius: 5px;
+  background: rgb(255, 255, 255);
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgb(204, 204, 204);
+  border-image: initial;
+}
+.contacts-form-wrapper {
+  padding-top: calc(30px + 35 * (100vw / 1920));
+  border-top: 1px solid #D7D7D7;
+  position: relative;
+  z-index: 100;
+}
+.contacts-form {
+  background: #F9F9F9;
+  border-radius: 6px;
+  padding: calc(10px + 40 * (100vw / 1920)) calc(10px + 70 * (100vw / 1920)) calc(10px + 70 * (100vw / 1920)) calc(10px + 70 * (100vw / 1920));
+  input,
+  textarea {
+    background: #FFFFFF;
+    border: 1px solid #F9F9F9;
+    border-radius: 2px;
+  }
+  .contacts-form-politics {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 161.52%;
+    color: #424242;
+  }
+  .btn-item-p {
+    background: #d82b35;
+    margin-left: auto;
+  }
+  .btn-item-p:hover {
+    background: #047237;
+    transition: .3s;
+  }
+}

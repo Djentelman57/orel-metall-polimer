@@ -1,0 +1,37 @@
+.menu-wrapper-link:hover {
+  transition: .3s;
+  .menu-btn circle {
+    fill: #fff;
+  }
+  .thin-line {
+    background: #fff;
+  }
+  .menu-title {
+    color: #FFFFFF;
+  }
+}
+.menu-pos {
+  position: relative;
+  z-index: 100;
+}
+.menu-wrapper {
+  margin-bottom: 20px;
+}
+.menu-wrapper-link {
+  border: 1px solid #d7d7d7;
+  padding: 18px 13px 22px 13px;
+  display: block;
+  background: #fff;
+  transition: .3s;
+}
+.menu-title {
+  font-family: 'Gilroy', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #424242;
+}
+.menu-image img {
+  width: 100%;
+}

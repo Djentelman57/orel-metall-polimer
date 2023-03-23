@@ -1,0 +1,10 @@
+.processor {
+  position: relative;
+  padding-bottom: calc(50px + 100 * (100vw / 1920));
+  .menu-wrapper-link:hover {
+    background: #ED3131;
+    .menu-btn path {
+      stroke: #ED3131;
+    }
+  }
+}

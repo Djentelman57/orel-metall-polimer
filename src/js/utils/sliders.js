@@ -137,3 +137,30 @@ const swiper = new Swiper(".about-advantages-swiper", {
         }
     }
 });
+const paginationRenderer = (swiper) => {
+    swiper
+        .el
+        .querySelector('.pagination-top').innerHTML = `${swiper.activeIndex + 1} / ${swiper.slides.length}`;
+};
+new Swiper(".super-swiper", {
+    modules: [Pagination, Grid],
+    slidesPerView: 1,
+    grabCursor: true,
+    loop: true,
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+    on: {
+        init() {
+            paginationRenderer(this);
+        },
+        slideChange() {
+            paginationRenderer(this);
+        }
+    },
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+});

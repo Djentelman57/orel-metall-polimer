@@ -1,0 +1,36 @@
+.super {
+  position: relative;
+  padding-bottom: calc(50px + 100 * (100vw / 1920));
+}
+.main-wrapper {
+  background: #F9F9F9;
+  padding: calc(20px + 54 * (100vw / 1920)) calc(20px + 54 * (100vw / 1920)) calc(20px + 70 * (100vw / 1920)) calc(20px + 54 * (100vw / 1920));
+}
+.super-swipers-wrapper {
+  padding-top: calc(50px + 78 * (100vw / 1920));
+}
+.super-swiper {
+  overflow-x: clip;
+  .pagination-top {
+    top: 0;
+    right: 0;
+    left: inherit;
+    font-size: 18px;
+    background: rgba(0,0,0,.5);
+    border-radius: 32px;
+    display: block;
+    color: #fff;
+    position: absolute;
+    z-index: 100;
+    padding: 2px 14px;
+  }
+  .swiper-pagination {
+    bottom: -30px;
+  }
+  .swiper-pagination-bullet-active {
+    background: #D82B35;
+  }
+}
+.super-swiper-block {
+  margin-bottom: 70px;
+}
